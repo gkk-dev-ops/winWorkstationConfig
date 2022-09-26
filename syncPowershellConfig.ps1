@@ -14,8 +14,8 @@ elseif ($args -eq 'pull') {
 }
 else {
     Write-Output "Please enter sync direction
-                  Push - push your current PS config into infra repository
-                       : Documents/WindowsPowershell -> infra.git 
-                  Pull - to pull config from infra repository
-                       : infra.git -> Documents/WindowsPowershell"
+                  Push - push your current PS config into winWorkstationConfig repository
+                       : Documents/WindowsPowershell -> winWorkstationConfig.git 
+                  Pull - to pull config from winWorkstationConfig repository
+                       : winWorkstationConfig.git -> Documents/WindowsPowershell"
 }
