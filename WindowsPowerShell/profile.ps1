@@ -3,11 +3,26 @@
 #            Part where all comands and functions are defined                  #
 ################################################################################
 
+$WarningPreference = 'SilentlyContinue'
+
+function nvim {
+    wsl nvim @args
+}
+
+function c {
+    cargo @args
+}
+
 function rmf {
     Remove-Item -Force -Recurse @args
 }
+
 function ex {
     explorer.exe .
+}
+
+function vs {
+    code .
 }
 
 function edit-profile {
@@ -65,6 +80,11 @@ import-module -Name Utils
 import-module -Name Navigation
 # git utils and aliases, CLI shortcuts
 import-module -Name gitCmds
+# provided having glyphs (e.g. https://www.nerdfonts.com/font-downloads) we can
+# add terminal icons
+# provided we've installed them https://github.com/devblackops/Terminal-Icons
+# (just run as Admin: Install-Module -Name Terminal-Icons -Repository PSGallery)
+Import-Module -Name Terminal-Icons
 
 # Shows navigable menu of all options when hitting Tab
 Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
@@ -78,7 +98,15 @@ Set-Alias -Name l -Value Get-ChildItem
 Set-Alias -Name lsa -Value la
 Set-Alias -Name python3 -Value py.exe
 Set-Alias -Name python -Value py.exe
-
+## Vim aliases
+Set-Alias -Name vi -Value nvim
+Set-Alias -Name nvi -Value nvim
+Set-Alias -Name neovi -Value nvim
+Set-Alias -Name neovim -Value nvim
+## VS Code aliases
+Set-Alias -Name vsc -Value vs
 
 # Editing path
 $env:Path += ';C:\webdriver' # webdriver folder for selenium scripts
+
+$WarningPreference = 'Continue'

@@ -3,6 +3,9 @@
 function to-dev {
     Set-location $DEV_DIR
 }
+function to-home {
+    Set-location $HOME
+}
 function to-infra {
     Set-location $INFRA_DEV
 }
