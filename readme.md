@@ -1,4 +1,4 @@
-# Windows Workstation configuration manual
+# Windows Workstation configuration manual <img align="right" width="300" height="300" src="https://user-images.githubusercontent.com/93217666/193429162-549f3ddc-b6cc-4a84-854e-00597690b3b7.png">
 
 ## Usage
 
